@@ -1,0 +1,679 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  background: #f4efec;
+}
+
+.menu {
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(to bottom, #003770, #195591, #27639f);
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+}
+
+nav {
+  height: 10vh;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding-top: calc(25% - 150px);
+  position: absolute;
+  z-index: 1;
+}
+
+.nav-links li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 4px;
+}
+
+.nav-links li:hover {
+  font-weight: 700;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-links li:nth-child(1) {
+  background: #f84828;
+}
+
+.nav-links li:nth-child(2) {
+  background: #f9800d;
+}
+
+.nav-links li:nth-child(3) {
+  background: #ffbf00;
+}
+
+.nav-links li:nth-child(4) {
+  background: #9cca00;
+}
+
+.nav-links li:nth-child(5) {
+  background: #008ad1;
+}
+
+.nav-links li:nth-child(6) {
+  background: #740098;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    height: 3px;
+    background: #fff;
+    margin: 3px;
+    border-radius: 3px;
+  }
+
+  .hamburger .line:nth-child(1) {
+    width: 30px;
+  }
+
+  .hamburger .line:nth-child(2) {
+    width: 20px;
+  }
+
+  .hamburger .line:nth-child(3) {
+    width: 10px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    /* position: fixed; */
+    background: linear-gradient(to bottom, #003770, #195591, #27639f);
+    background: transparent;
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1100px at 90% -10%);
+    -webkit-clip-path: circle(1100px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+}
+
+.menu .container {
+  width: 100%;
+  /* height: 70vh; */
+  overflow: hidden;
+  backface-visibility: fixed;
+}
+
+.menu .container img {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
+/* --------------------------
+:: Home Area CSS Start
+-------------------------- */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #9cca00;
+  width: 100%;
+  height: 30vh;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.home h1 {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+}
+
+.home h2 {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* --------------------------
+:: Courses Area CSS Start
+-------------------------- */
+
+.courses-content {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cards h3 {
+  color: #5d554d;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+}
+
+.container .card {
+  position: relative;
+  width: 250px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.5s; */
+  overflow: hidden;
+  transform-style: preserve-3d;
+  padding: 0 10px;
+  background: transparent;
+}
+
+.container .card .imgBx {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container .card img {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+}
+
+.container .card h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  color: #9cca00;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.container .card p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #5d524c;
+  font-size: 16px;
+}
+
+.container .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.container .card .overlay {
+  position: absolute;
+  bottom: 15px;
+  width: 80%;
+  height: 50px;
+  background: #f4efec;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.container .card .overlay:hover {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.container .card .overlay:before {
+  content: "Saiba mais";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  background: #f9800d;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-delay: 0.5s;
+}
+
+.container .card .overlay:hover:before {
+  display: none;
+  transition-delay: 0s;
+}
+
+.container .card .content {
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0s;
+  color: #f4efec;
+}
+
+.container .card .overlay:hover ~ .content {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s;
+  transition-delay: 0.5s;
+}
+
+.container .card .content h5 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 900;
+  color: #9cca00;
+  text-align: center;
+}
+
+.container .card .content p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #5d524c;
+  text-align: center;
+  padding: 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container .card {
+    position: relative;
+    width: 500px;
+    height: 280px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .card .imgBx {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container .card .imgBx .imgBx-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .card h4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .container .card p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding-right: 10px;
+  }
+}
+
+/* --------------------------
+:: Information Area CSS Start
+-------------------------- */
+
+.information-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f4efec;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.news h3 {
+  color: #5d554d;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.news-content {
+  display: flex;
+}
+
+.news-content img {
+  width: 30px;
+}
+
+.news-content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #5d524c;
+}
+
+.news-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agenda {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  /* padding: 0 20px; */
+}
+
+.agenda h3 {
+  color: #5d554d;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.agenda-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 0 0;
+}
+
+.date {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9cca00;
+  width: 70px;
+  height: 60%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+}
+
+#month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #817f7f;
+  width: 70px;
+  height: 40%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.text p {
+  width: 100%;
+  padding-left: 10px;
+  color: #5d524c;
+  font-size: 20px;
+}
+
+/* --------------------------
+:: Strip Area CSS Start
+-------------------------- */
+
+.strip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  height: 15vh;
+}
+
+.strip-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.strip-content .strip {
+  width: 90%;
+}
+
+.strip-content p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 70%;
+  text-align: center;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .strip-content .strip {
+    height: 150px;
+  }
+}
+
+/* --------------------------
+:: Footer Area CSS Start
+-------------------------- */
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5d564e;
+  padding: 30px 0;
+}
+
+.footer-content .container {
+  padding: 20px 0;
+}
+
+.footer-content .footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content .footer-logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.footer-content .address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content .address .address-title {
+  color: #ccc;
+}
+
+.footer-content .address .address-content {
+  color: #ccc;
+  text-align: center;
+}
+
+.footer-content .telephone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content .telephone .telephone-title {
+  color: #ccc;
+}
+
+.footer-content .telephone .telephone-content {
+  color: #ccc;
+}
+
+.footer-social .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social .social .social-title {
+  color: #ccc;
+}
+
+.footer-social .social .social-content img {
+  width: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content .address {
+    width: 100%;
+    text-align: center;
+    /* background: chartreuse; */
+  }
+
+  .footer-content .telephone {
+    width: 100%;
+    text-align: center;
+    /* background: chartreuse; */
+  }
+}
+
+/* --------------------------
+:: Button Top Area CSS Start
+-------------------------- */
+
+#button-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  background: #f84828;
+  border-radius: 5px;
+  border: none;
+  display: none;
+}
+
+#button-top img {
+  width: 40px;
+}
