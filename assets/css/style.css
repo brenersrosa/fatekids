@@ -150,14 +150,15 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, #003770, #195591, #27639f);
-  padding: 5% 0;
+  padding: 10% 0;
 }
 
 .menu .logo {
   position: absolute;
-  width: 200px;
-  top: 15px;
-  left: 15px;
+  width: 300px;
+  top: 25px;
+  left: 130px;
+  z-index: 1000;
 }
 
 nav {
@@ -171,6 +172,8 @@ nav {
   height: 100%;
   list-style: none;
   padding: 0 250px;
+  position: relative;
+  z-index: 100;
 }
 
 .nav-links li {
@@ -220,6 +223,46 @@ nav {
   text-transform: uppercase;
 }
 
+.menu .parallax-container {
+  padding-top: 10vh;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: fixed;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.menu .parallax-container img {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 100%;
+}
+
+.slider {
+  margin: 0 auto;
+  max-width: 1000px;
+  max-height: 400px;
+  z-index: 100;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.carousel-item img {
+  /* max-width: 70vw;
+  max-height: 70vh; */
+  border-radius: 20px;
+  border: solid 5px #fff;
+  background-size: cover;
+  max-width: 1000px;
+  max-height: 400px;
+}
+
 @media screen and (max-width: 768px) {
   .line {
     height: 3px;
@@ -260,8 +303,8 @@ nav {
   .nav-links {
     padding: 0;
     position: fixed;
-    /* background: linear-gradient(to bottom, #003770, #195591, #27639f); */
     background: transparent;
+    background: linear-gradient(to bottom, #003770, #195591, #27639f);
     width: 100%;
     height: 100vh;
     flex-direction: column;
@@ -288,43 +331,23 @@ nav {
   .slider-container {
     padding: 50% 0;
   }
+
+  .menu {
+    padding: 5% 0;
+  }
+
+  .menu .logo {
+    top: 50px;
+    left: 30px;
+  }
 }
 
-.menu .container {
-  padding-top: 10vh;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  backface-visibility: fixed;
-}
-
-.menu .container img {
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
-}
-
-.teste {
-  margin: 0 auto;
-  max-width: 70vw;
-  max-height: 70vh;
-}
-
-.slider-container {
-  display: flex;
-  justify-content: center;
-  /* margin: 0 30px; */
-  /* max-width: 80vw;
-  max-height: 80vh; */
-  /* border: solid 5px #fff; */
-  border-radius: 20px;
-}
-
-.carousel-item img {
-  max-width: 70vw;
-  max-height: 70vh;
-  border-radius: 20px;
-  border: solid 5px #fff;
+@media screen and (max-width: 380px) {
+  .menu .logo {
+    top: 30px;
+    left: 20px;
+    width: 200px;
+  }
 }
 
 /* --------------------------
@@ -341,19 +364,21 @@ nav {
 
 .section-heading h2 {
   color: #fff;
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 30px;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.container {
+.card-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   transform-style: preserve-3d;
+  margin: 0 auto;
 }
 
-.container .card {
+.card-container .card {
   position: relative;
   width: 250px;
   margin: 10px;
@@ -369,7 +394,7 @@ nav {
   padding: 0 10px;
 }
 
-.container .card .imgBx {
+.card-container .card .imgBx {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -378,27 +403,27 @@ nav {
   text-align: center;
 }
 
-.container .card:nth-child(1),
-.container .card:nth-child(1) .overlay {
+.card-container .card:nth-child(1),
+.card-container .card:nth-child(1) .overlay {
   background: linear-gradient(45deg, #ffbf00, #ce9e0d);
 }
 
-.container .card:nth-child(2),
-.container .card:nth-child(2) .overlay {
+.card-container .card:nth-child(2),
+.card-container .card:nth-child(2) .overlay {
   background: linear-gradient(45deg, #f9800d, #c5660e);
 }
 
-.container .card:nth-child(3),
-.container .card:nth-child(3) .overlay {
+.card-container .card:nth-child(3),
+.card-container .card:nth-child(3) .overlay {
   background: linear-gradient(45deg, #b71540, #b10f3a);
 }
 
-.container .card:nth-child(4),
-.container .card:nth-child(4) .overlay {
+.card-container .card:nth-child(4),
+.card-container .card:nth-child(4) .overlay {
   background: linear-gradient(45deg, #740098, #650a81);
 }
 
-.container .card h3 {
+.card-container .card h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -413,11 +438,12 @@ nav {
   margin: 30px 0;
 }
 
-.container .card img {
-  width: 70px;
+.card-container .card img {
+  width: 110px;
+  height: 70px;
 }
 
-.container .card p {
+.card-container .card p {
   font-size: 16px;
   color: #fff;
   margin: 20px 0;
@@ -425,19 +451,19 @@ nav {
   height: 300px;
 }
 
-/* .container:hover .card {
+/* .card-container:hover .card {
   transform: perspective(500px) rotateY(30deg);
 }
 
-.container .card:hover {
+.card-container .card:hover {
   transform: perspective(500px) rotateY(0);
 }
 
-.container .card:hover ~ .card {
+.card-container .card:hover ~ .card {
   transform: perspective(500px) rotateY(-30deg);
 } */
 
-.container .card:before {
+.card-container .card:before {
   content: "";
   position: absolute;
   top: 0;
@@ -449,7 +475,7 @@ nav {
   pointer-events: none;
 }
 
-.container .card .overlay {
+.card-container .card .overlay {
   position: absolute;
   bottom: 15px;
   width: 80%;
@@ -461,7 +487,7 @@ nav {
   transition: 0.5s;
 }
 
-.container .card .overlay:hover {
+.card-container .card .overlay:hover {
   bottom: 0;
   right: 0;
   width: 100%;
@@ -471,7 +497,7 @@ nav {
   border-radius: 0;
 }
 
-.container .card .overlay:before {
+.card-container .card .overlay:before {
   content: "Saiba mais";
   position: absolute;
   top: 0;
@@ -491,12 +517,12 @@ nav {
   transition-delay: 0.5s;
 }
 
-.container .card .overlay:hover:before {
+.card-container .card .overlay:hover:before {
   display: none;
   transition-delay: 0s;
 }
 
-.container .card .content {
+.card-container .card .content {
   padding: 20px;
   box-sizing: border-box;
   z-index: 1;
@@ -507,14 +533,14 @@ nav {
   color: #fff;
 }
 
-.container .card .overlay:hover ~ .content {
+.card-container .card .overlay:hover ~ .content {
   opacity: 1;
   visibility: visible;
   transition: 0.2s;
   transition-delay: 0.5s;
 }
 
-.container .card .content h4 {
+.card-container .card .content h4 {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -523,7 +549,7 @@ nav {
   color: #fff;
 }
 
-.container .card .content p {
+.card-container .card .content p {
   font-size: 14px;
   font-weight: 500;
 }
@@ -676,10 +702,12 @@ nav {
 /* --------------------------
 :: Strip Area CSS Start
 -------------------------- */
+
 .strip-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px 0;
   height: 15vh;
 }
 
@@ -692,6 +720,7 @@ nav {
 
 .strip-content .strip {
   width: 90%;
+  height: 70px;
 }
 
 .strip-content p {
@@ -704,53 +733,6 @@ nav {
   position: absolute;
 }
 
-/* .strip-content .strip1 {
-  background: #9cbe28;
-  width: 80%;
-  height: 10vh;
-  z-index: 1;
-}
-
-.strip2 {
-  background: #75960a;
-  width: 48px;
-  height: 10vh;
-  position: absolute;
-  left: calc(10% - 35px);
-  margin-top: 2vh;
-}
-
-.strip2:after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  right: 16px;
-  border-top: 5vh solid transparent;
-  border-bottom: 5vh solid transparent;
-  border-left: 5vh solid #f4efec;
-}
-
-.strip3 {
-  background: #75960a;
-  width: 48px;
-  height: 10vh;
-  position: absolute;
-  right: calc(10% - 35px);
-  margin-top: 2vh;
-}
-
-.strip3:after {
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  right: 0px;
-  border-top: 5vh solid transparent;
-  border-bottom: 5vh solid transparent;
-  border-right: 5vh solid #f4efec;
-} */
-
 @media screen and (max-width: 768px) {
   .strip-content .strip {
     height: 150px;
@@ -761,79 +743,95 @@ nav {
 :: Footer Area CSS Start
 -------------------------- */
 
-.footer-social {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: #5d564e;
-}
-
-.footer-social .logo {
+.footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 25%;
+  background: #5d564e;
+  padding: 30px 0;
 }
 
-.footer-social .logo img {
+.footer-content .container {
+  padding: 20px 0;
+}
+
+.footer-content .footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content .footer-logo img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
 }
 
-.footer-social .address {
-  height: 100%;
-  width: 25%;
-}
-
-.footer-social .address .address-title {
+.footer-content .address {
   display: flex;
-  align-items: flex-end;
-  height: 50px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-social .address .address-content {
-  height: calc(100% - 50px);
+.footer-content .address .address-title {
+  color: #ccc;
 }
 
-.footer-social .telephone {
-  height: 100%;
-  width: 25%;
+.footer-content .address .address-content {
+  color: #ccc;
+  text-align: center;
 }
 
-.footer-social .telephone .telephone-title {
+.footer-content .telephone {
   display: flex;
-  align-items: flex-end;
-  height: 50px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-social .telephone .telephone-content {
-  height: calc(100% - 50px);
+.footer-content .telephone .telephone-title {
+  color: #ccc;
+}
+
+.footer-content .telephone .telephone-content {
+  color: #ccc;
 }
 
 .footer-social .social {
-  height: 100%;
-  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-social .social .social-title {
-  display: flex;
-  align-items: flex-end;
-  height: 50px;
-}
-
-.footer-social .social .social-content {
-  height: calc(100% - 50px);
+  color: #ccc;
 }
 
 .footer-social .social .social-content img {
   width: 30px;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-content .address {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-content .telephone {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* --------------------------
+:: Button Top Area CSS Start
+-------------------------- */
 
 #button-top {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 15px;
+  right: 15px;
   width: 50px;
   height: 50px;
   background: #f84828;

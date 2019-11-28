@@ -22,9 +22,10 @@ body {
 
 .logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 200px;
+  width: 300px;
+  top: 25px;
+  left: 130px;
+  z-index: 1000;
 }
 
 nav {
@@ -87,6 +88,19 @@ nav {
   text-transform: uppercase;
 }
 
+.menu .container {
+  width: 100%;
+  /* height: 70vh; */
+  overflow: hidden;
+  backface-visibility: fixed;
+}
+
+.menu .container img {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+}
+
 @media screen and (max-width: 768px) {
   .line {
     height: 3px;
@@ -125,7 +139,6 @@ nav {
   }
 
   .nav-links {
-    /* position: fixed; */
     background: linear-gradient(to bottom, #003770, #195591, #27639f);
     background: transparent;
     width: 100%;
@@ -150,19 +163,23 @@ nav {
     border-radius: 0;
     margin: 0;
   }
+
+  .menu {
+    padding: 5% 0;
+  }
+
+  .menu .logo {
+    top: 50px;
+    left: 30px;
+  }
 }
 
-.menu .container {
-  width: 100%;
-  /* height: 70vh; */
-  overflow: hidden;
-  backface-visibility: fixed;
-}
-
-.menu .container img {
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+@media screen and (max-width: 380px) {
+  .menu .logo {
+    top: 30px;
+    left: 20px;
+    width: 200px;
+  }
 }
 
 /* --------------------------
@@ -553,6 +570,7 @@ nav {
 
 .strip-content .strip {
   width: 90%;
+  height: 70px;
 }
 
 .strip-content p {
@@ -648,13 +666,11 @@ nav {
   .footer-content .address {
     width: 100%;
     text-align: center;
-    /* background: chartreuse; */
   }
 
   .footer-content .telephone {
     width: 100%;
     text-align: center;
-    /* background: chartreuse; */
   }
 }
 
