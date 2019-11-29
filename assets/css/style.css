@@ -355,11 +355,14 @@ nav {
 -------------------------- */
 
 .cards-area {
-  padding: 50px;
-  background: #9cbe28;
+  padding: 150px 50px 30px 50px;
   text-transform: uppercase;
   text-align: center;
   height: 100%;
+  position: relative;
+  top: -130px;
+  background: url(/assets/images/jardimhome_2.png) no-repeat;
+  background-size: cover;
 }
 
 .section-heading h2 {
@@ -405,22 +408,22 @@ nav {
 
 .card-container .card:nth-child(1),
 .card-container .card:nth-child(1) .overlay {
-  background: linear-gradient(45deg, #ffbf00, #ce9e0d);
+  background: linear-gradient(45deg, #f0d100, #f0d100);
 }
 
 .card-container .card:nth-child(2),
 .card-container .card:nth-child(2) .overlay {
-  background: linear-gradient(45deg, #f9800d, #c5660e);
+  background: linear-gradient(45deg, #f9800d, #f9800d);
 }
 
 .card-container .card:nth-child(3),
 .card-container .card:nth-child(3) .overlay {
-  background: linear-gradient(45deg, #b71540, #b10f3a);
+  background: linear-gradient(45deg, #008ad1, #008ad1);
 }
 
 .card-container .card:nth-child(4),
 .card-container .card:nth-child(4) .overlay {
-  background: linear-gradient(45deg, #740098, #650a81);
+  background: linear-gradient(45deg, #892aa7, #892aa7);
 }
 
 .card-container .card h3 {
@@ -430,7 +433,7 @@ nav {
   width: 90%;
   height: 50px;
   border-radius: 50px;
-  background: rgba(0, 0, 0, 0.19);
+  background: rgba(0, 0, 0, 0.1);
   color: #fff;
   font-size: 25px;
   font-weight: 700;

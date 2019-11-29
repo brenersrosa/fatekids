@@ -148,7 +148,7 @@ nav {
     -webkit-clip-path: circle(100px at 90% -20%);
     transition: all 1s ease-out;
     pointer-events: none;
-    z-index: 1;
+    z-index: 1000;
     margin: 0;
   }
 
@@ -196,9 +196,9 @@ nav {
   height: calc(30vh + 150px);
   padding: 40px;
   position: relative;
-  z-index: 1;
+  z-index: 100;
   position: relative;
-  top: -150px;
+  top: -100px;
   background: url(/assets/images/jardimhome_2.png) no-repeat;
   background-size: cover;
   padding-top: 100px;
@@ -224,21 +224,17 @@ nav {
 }
 
 /* --------------------------
-:: Courses Area CSS Start
+:: School Area CSS Start
 -------------------------- */
 
-.courses-content {
+.school-content {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
 }
 
-.cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.cards h3 {
+.school h3 {
   color: #5d554d;
   font-weight: 700;
   font-size: 30px;
@@ -246,194 +242,111 @@ nav {
   padding: 20px 0;
 }
 
-.container {
+.school .school-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  transform-style: preserve-3d;
 }
 
-.container .card {
-  position: relative;
-  width: 250px;
-  margin: 10px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.5s; */
-  overflow: hidden;
-  transform-style: preserve-3d;
-  padding: 0 10px;
-  background: transparent;
-}
-
-.container .card .imgBx {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.container .card img {
-  width: 200px;
-  height: 200px;
-  padding: 15px;
-}
-
-.container .card h4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.school .school-container img {
   width: 100%;
-  height: 50px;
-  color: #9cca00;
+  background-size: cover;
+  border: solid 6px #fff;
+}
+
+.school .school-container .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.school .school-container .card-content h4 {
+  color: #000;
   font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.container .card p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.school .school-container .card-content p {
   color: #5d524c;
-  font-size: 16px;
+  font-size: 20px;
+  text-align: justify;
 }
 
-.container .card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.08);
-  z-index: 20;
-  pointer-events: none;
-}
-
-.container .card .overlay {
-  position: absolute;
-  bottom: 15px;
-  width: 80%;
-  height: 50px;
-  background: #f4efec;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
-  cursor: pointer;
-  border-radius: 5px;
-  transition: 0.5s;
-}
-
-.container .card .overlay:hover {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  opacity: 1;
-  border-radius: 0;
-}
-
-.container .card .overlay:before {
-  content: "Saiba mais";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: #fff;
-  background: #f9800d;
-  border-radius: 5px;
-  font-size: 12px;
+.teachers h3 {
+  color: #5d554d;
+  font-weight: 700;
+  font-size: 30px;
   text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+.teachers .teachers-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition-delay: 0.5s;
+  margin: 10px 0;
 }
 
-.container .card .overlay:hover:before {
-  display: none;
-  transition-delay: 0s;
+.teachers .teachers-container .teachers-image {
+  width: 100%;
+  margin: 10px;
+}
+.teachers .teachers-container .teachers-image img {
+  width: 100%;
+  border: solid 6px #fff;
+  border-radius: 50%;
 }
 
-.container .card .content {
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0s;
-  color: #f4efec;
+.teachers .teachers-container .teachers-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.container .card .overlay:hover ~ .content {
-  opacity: 1;
-  visibility: visible;
-  transition: 0.2s;
-  transition-delay: 0.5s;
-}
-
-.container .card .content h5 {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
+.teachers .teachers-container .teachers-content h4 {
+  color: #9cbe28;
   font-size: 25px;
-  font-weight: 900;
-  color: #9cca00;
+  font-weight: 700;
+  text-transform: uppercase;
   text-align: center;
 }
 
-.container .card .content p {
-  font-size: 15px;
-  font-weight: 500;
+.teachers .teachers-container .teachers-content p {
   color: #5d524c;
+  font-size: 20px;
   text-align: center;
-  padding: 40px 0;
 }
 
 @media screen and (max-width: 768px) {
-  .container .card {
-    position: relative;
-    width: 500px;
-    height: 280px;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container .card .imgBx {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .container .card .imgBx .imgBx-content {
-    display: flex;
+  .school .school-container {
     flex-direction: column;
   }
 
-  .container .card h4 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  .school h3,
+  .school .school-container .card-content h4,
+  .teachers h3,
+  .teachers .teachers-container .teachers-content h4 {
+    text-align: center;
+    padding: 20px 0;
   }
 
-  .container .card p {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-    padding-right: 10px;
+  .lineh {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .school h3,
+  .school .school-container .card-content h4,
+  .teachers h3,
+  .teachers .teachers-container .teachers-content h4 {
+    text-align: center;
+  }
+
+  .lineh {
+    display: none;
   }
 }
 
@@ -552,6 +465,33 @@ nav {
   padding-left: 10px;
   color: #5d524c;
   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .news h3,
+  .agenda h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .news h3,
+  .agenda h3 {
+    text-align: center;
+  }
+}
+
+/* --------------------------
+:: Line Area CSS Start
+-------------------------- */
+
+.lineh {
+  border: solid 0.5px #b6b2b2;
+  margin: 50px 0;
+}
+.linev {
+  border: solid 0.5px #b6b2b2;
+  margin: 0 30px;
 }
 
 /* --------------------------
