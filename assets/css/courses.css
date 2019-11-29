@@ -196,9 +196,9 @@ nav {
   height: calc(30vh + 150px);
   padding: 40px;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   position: relative;
-  top: -150px;
+  top: -100px;
   background: url(/assets/images/jardimhome_2.png) no-repeat;
   background-size: cover;
   padding-top: 100px;
@@ -230,6 +230,7 @@ nav {
 .courses-content {
   display: flex;
   justify-content: center;
+  padding: 50px 50px;
 }
 
 .cards {
@@ -243,7 +244,7 @@ nav {
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
-  padding: 20px 0;
+  padding: 20px 15px;
 }
 
 .container {
@@ -437,6 +438,24 @@ nav {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .courses-content {
+    padding: 0;
+  }
+
+  .cards h3 {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .cards h3 {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
 /* --------------------------
 :: Information Area CSS Start
 -------------------------- */
@@ -552,6 +571,33 @@ nav {
   padding-left: 10px;
   color: #5d524c;
   font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .news h3,
+  .agenda h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .news h3,
+  .agenda h3 {
+    text-align: center;
+  }
+}
+
+/* --------------------------
+:: Line Area CSS Start
+-------------------------- */
+
+.lineh {
+  border: solid 0.5px #b6b2b2;
+  margin: 50px 0;
+}
+.linev {
+  border: solid 0.5px #b6b2b2;
+  margin: 0 30px;
 }
 
 /* --------------------------

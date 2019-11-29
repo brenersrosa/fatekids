@@ -148,7 +148,7 @@ nav {
     -webkit-clip-path: circle(100px at 90% -20%);
     transition: all 1s ease-out;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 1;
     margin: 0;
   }
 
@@ -196,7 +196,7 @@ nav {
   height: calc(30vh + 150px);
   padding: 40px;
   position: relative;
-  z-index: 100;
+  z-index: 0;
   position: relative;
   top: -100px;
   background: url(/assets/images/jardimhome_2.png) no-repeat;
@@ -290,11 +290,13 @@ nav {
 }
 
 .teachers .teachers-container .teachers-image {
+  display: flex;
+  justify-content: center;
   width: 100%;
   margin: 10px;
 }
 .teachers .teachers-container .teachers-image img {
-  width: 100%;
+  width: 80%;
   border: solid 6px #fff;
   border-radius: 50%;
 }
@@ -315,11 +317,15 @@ nav {
 
 .teachers .teachers-container .teachers-content p {
   color: #5d524c;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 }
 
 @media screen and (max-width: 768px) {
+  .school-content {
+    padding: 0;
+  }
+
   .school .school-container {
     flex-direction: column;
   }
