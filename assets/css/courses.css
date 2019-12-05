@@ -231,6 +231,7 @@ nav {
   font-weight: 900;
   text-align: center;
   color: #fff;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .home h2 {
@@ -283,9 +284,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.5s; */
   overflow: hidden;
   transform-style: preserve-3d;
   padding: 0 10px;
@@ -347,7 +345,6 @@ nav {
   width: 80%;
   height: 50px;
   background: #f4efec;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   cursor: pointer;
   border-radius: 5px;
   transition: 0.5s;
@@ -455,7 +452,7 @@ nav {
   .container .card h4 {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .container .card p {

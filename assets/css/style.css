@@ -18,135 +18,7 @@ body {
 :: Header Area CSS
 -------------------------- */
 
-/* .navbar-light .navbar-brand {
-  color: #fff !important;
-}
-
-.header_area {
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 99;
-  top: 0;
-  padding: 0 4%;
-}
-
-.menu_area .navbar-brand {
-  font-size: 72px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0;
-  line-height: 1;
-  padding: 0;
-}
-
-.menu_area .navbar-brand:hover, .menu_area .navbar-brand:focus {
-  color: #fff;
-}
-
-.menu_area {
-  position: relative;
-  z-index: 2;
-}
-
-.menu_area #nav .nav-link {
-  color: #fff;
-  display: block;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 30px;
-  -webkit-transition-duration: 500ms;
-  -o-transition-duration: 500ms;
-  transition-duration: 500ms;
-  padding: 35px 15px;
-}
-
-.menu_area nav ul li>a:hover {
-  color: #fb6097;
-} */
-
-/* menu */
-
-/* nav {
-  height: 100vh;
-  background: linear-gradient(to bottom, #002998, #0077ff);
-}
-
-.menu .logo {
-  height: 100px;
-  margin: 30px;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  margin-left: auto;
-}
-
-.nav-links li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 50px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  margin: 0 2px;
-}
-
-#home {
-  background: #f84828;
-}
-
-.nav-links li:hover {
-  font-weight: 700;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#courses {
-  background: #f9800d;
-}
-
-#school {
-  background: #ffbf00;
-}
-
-#gallery {
-  background: #9cca00;
-}
-
-#mission {
-  background: #b71540;
-}
-
-#contact {
-  background: #740098;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.menu .background {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  height: auto;
-  border: solid 5px #fff;
-  border-radius: 10px;
-} */
-
 .menu {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   width: 100%;
   height: 100vh;
   background: linear-gradient(to bottom, #003770, #195591, #27639f);
@@ -235,8 +107,6 @@ nav {
 }
 
 .menu .parallax-container img {
-  /* margin-left: 10%;
-  margin-right: 10%; */
   width: 100%;
   height: 100%;
 }
@@ -244,7 +114,6 @@ nav {
 .slider {
   margin: 0 auto;
   width: 1000px;
-  /* height: 400px; */
   z-index: 100;
 }
 
@@ -300,7 +169,6 @@ nav {
 
   .nav-links {
     padding: 0;
-    /* position: fixed; */
     background: transparent;
     background: linear-gradient(to bottom, #003770, #195591, #27639f);
     width: 100%;
@@ -380,10 +248,9 @@ nav {
   align-items: center;
   position: absolute;
   width: 100%;
-  top: -60px;
+  top: -100px;
   left: 0;
   z-index: 0;
-  /* height: 100px; */
 }
 
 .cards-area {
@@ -396,10 +263,6 @@ nav {
   position: relative;
   z-index: 0;
   background: #acd031;
-  /* top: -120px; */
-  /* background: url(/assets/images/jardimhome.png) no-repeat; */
-  /* background-size: cover; */
-  /* padding-top: 100px; */
 }
 
 .section-heading h2 {
@@ -491,18 +354,6 @@ nav {
   padding: 0 10px;
   height: 300px;
 }
-
-/* .card-container:hover .card {
-  transform: perspective(500px) rotateY(30deg);
-}
-
-.card-container .card:hover {
-  transform: perspective(500px) rotateY(0);
-}
-
-.card-container .card:hover ~ .card {
-  transform: perspective(500px) rotateY(-30deg);
-} */
 
 .card-container .card:before {
   content: "";
@@ -601,7 +452,7 @@ nav {
 -------------------------- */
 
 .information-section {
-  padding: 50px;
+  padding: 100px 50px 0 50px;
   background: #f4efec;
 }
 
