@@ -62,15 +62,15 @@ nav {
 }
 
 .nav-links li:nth-child(2) {
-  background: #f9800d;
-}
-
-.nav-links li:nth-child(3) {
   background: #ffbf00;
 }
 
-.nav-links li:nth-child(4) {
+.nav-links li:nth-child(3) {
   background: #9cca00;
+}
+
+.nav-links li:nth-child(4) {
+  background: #008ad1;
 }
 
 .nav-links li:nth-child(5) {
@@ -213,7 +213,8 @@ nav {
   align-items: center;
   background: #9cca00;
   width: 100%;
-  height: calc(30vh + 150px);
+  height: 100%;
+  padding: 40px;
   position: relative;
   z-index: 0;
   position: relative;
@@ -243,65 +244,24 @@ nav {
 }
 
 /* --------------------------
-:: Mission Area CSS Start
+:: News Area CSS Start
 -------------------------- */
 
-.mission-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.news-section {
+  position: relative;
+  top: -120px;
+  background: #f4efec;
   padding: 50px 50px;
-  margin-top: -120px;
 }
 
-.mission-section h3 {
-  color: #5d554d;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-
-.mission-section .mission h4 {
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.mission p {
-  font-size: 20px;
-  text-align: justify;
-  color: #5d524c;
-  text-indent: 40px;
-}
-
-.mission img {
-  width: 200px;
-  padding: 0 10px;
-}
-
-.description h3 {
-  color: #5d554d;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-
-.description .description-content img {
+.news-section img {
   width: 40%;
-  border: solid 6px #fff;
   float: left;
   margin-right: 20px;
+  border: solid 6px #fff;
 }
 
-.description .description-content h4 {
-  font-size: 25px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.description .description-content p {
+.news-section p {
   font-size: 20px;
   text-align: justify;
   color: #5d524c;
@@ -309,227 +269,8 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .mission-content {
-    padding: 0;
-  }
-
-  .mission h3,
-  .mission h4,
-  .description h3,
-  .description h4 {
-    text-align: center;
-    padding: 50px 0;
-  }
-
-  .mission .container {
-    display: flex;
-    align-items: center;
-  }
-
-  .linev,
-  .lineh {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .mission .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .description .description-content img {
+  .news-section img {
     width: 100%;
-  }
-}
-
-/* --------------------------
-:: Information Area CSS Start
--------------------------- */
-
-.information-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #f4efec;
-}
-
-.news {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 0 20px;
-}
-
-.news h3 {
-  color: #5d554d;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding: 20px 0;
-}
-
-.news-content {
-  display: flex;
-}
-
-.news-content img {
-  width: 30px;
-}
-
-.news-content a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-size: 20px;
-  margin-left: 10px;
-  color: #5d524c;
-  padding: 5px 0;
-}
-
-.news-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.agenda {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  /* padding: 0 20px; */
-}
-
-.agenda h3 {
-  color: #5d554d;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  padding: 20px 0;
-}
-
-.agenda-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 0 0;
-}
-
-.date {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #9cca00;
-  width: 70px;
-  height: 60%;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  font-size: 30px;
-  font-weight: 900;
-  color: #fff;
-}
-
-#month {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #817f7f;
-  width: 70px;
-  height: 40%;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  font-size: 15px;
-  font-weight: 900;
-  color: #fff;
-}
-
-.text p {
-  width: 100%;
-  padding-left: 10px;
-  color: #5d524c;
-  font-size: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .news h3,
-  .agenda h3 {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  .news h3,
-  .agenda h3 {
-    text-align: center;
-  }
-}
-
-/* --------------------------
-:: Line Area CSS Start
--------------------------- */
-
-.lineh {
-  border: solid 0.5px #b6b2b2;
-}
-
-.linev {
-  border: solid 0.5px #b6b2b2;
-  margin: 0 30px;
-}
-
-/* --------------------------
-:: Strip Area CSS Start
--------------------------- */
-
-.strip-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-  height: 15vh;
-}
-
-.strip-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.strip-content .strip {
-  width: 90%;
-  height: 70px;
-}
-
-.strip-content p {
-  font-size: 16px;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: 70%;
-  text-align: center;
-  position: absolute;
-}
-
-@media screen and (max-width: 768px) {
-  .strip-content .strip {
-    height: 150px;
   }
 }
 
